@@ -1,22 +1,18 @@
 package pl.edu.agh.iisg.to.javafx.cw3.controller;
 
-import java.math.BigDecimal;
-import java.time.LocalDate;
-
 import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ListCell;
-import javafx.scene.control.ListView;
-import javafx.scene.control.SelectionMode;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
+import pl.edu.agh.iisg.to.javafx.cw3.command.AddTransactionCommand;
 import pl.edu.agh.iisg.to.javafx.cw3.command.Command;
 import pl.edu.agh.iisg.to.javafx.cw3.command.CommandRegistry;
 import pl.edu.agh.iisg.to.javafx.cw3.model.Account;
 import pl.edu.agh.iisg.to.javafx.cw3.model.Category;
 import pl.edu.agh.iisg.to.javafx.cw3.model.Transaction;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
 
 public class AccountOverviewController {
 
@@ -113,7 +109,8 @@ public class AccountOverviewController {
 		Transaction transaction = Transaction.newTransaction();
 
 		if (appController.showTransactionEditDialog(transaction)) {
-			data.addTransaction(transaction);
+			AddTransactionCommand addTransactionCommand = new AddTransactionCommand(transaction, data);
+			commandRegistry.executeCommand(addTransactionCommand);
 		}
 	}
 

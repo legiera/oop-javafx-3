@@ -1,10 +1,5 @@
 package pl.edu.agh.iisg.to.javafx.cw3.presenter;
 
-import java.math.BigDecimal;
-import java.text.DecimalFormat;
-import java.text.ParseException;
-import java.time.format.DateTimeFormatter;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
@@ -12,6 +7,11 @@ import javafx.stage.Stage;
 import javafx.util.converter.LocalDateStringConverter;
 import pl.edu.agh.iisg.to.javafx.cw3.model.Category;
 import pl.edu.agh.iisg.to.javafx.cw3.model.Transaction;
+
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
+import java.text.ParseException;
+import java.time.format.DateTimeFormatter;
 
 public class TransactionEditDialogPresenter {
 

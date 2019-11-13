@@ -1,7 +1,5 @@
 package pl.edu.agh.iisg.to.javafx.cw3.controller;
 
-import java.io.IOException;
-
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
@@ -12,6 +10,8 @@ import pl.edu.agh.iisg.to.javafx.cw3.command.CommandRegistry;
 import pl.edu.agh.iisg.to.javafx.cw3.model.Transaction;
 import pl.edu.agh.iisg.to.javafx.cw3.model.generator.DataGenerator;
 import pl.edu.agh.iisg.to.javafx.cw3.presenter.TransactionEditDialogPresenter;
+
+import java.io.IOException;
 
 public class AccountAppController {
 
